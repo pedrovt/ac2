@@ -1,5 +1,8 @@
-# AC2
-# Pedro Teixeira
+# --------------------------------
+# Guião 1, Ex 4
+# Arquitectura de Computadores II
+# Pedro Teixeira, 84715, MIECT
+# --------------------------------
 # Programa 4 – teste dos system calls de leitura e impressão de inteiros
 
         .equ printStr, 8

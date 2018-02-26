@@ -1,5 +1,8 @@
-# AC2
-# Pedro Teixeira
+# --------------------------------
+# Guião 1, Ex 3
+# Arquitectura de Computadores II
+# Pedro Teixeira, 84715, MIECT
+# --------------------------------
 # Programa 3 – teste dos system calls "getChar()" e "putChar()"
 
         .equ getChar, 2

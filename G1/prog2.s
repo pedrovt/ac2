@@ -1,5 +1,8 @@
-# AC2
-# Pedro Teixeira
+# --------------------------------
+# Guião 1, Ex 2
+# Arquitectura de Computadores II
+# Pedro Teixeira, 84715, MIECT
+# --------------------------------
 # Programa 2 – teste do system call "inkey()"
 
 				.equ inkey, 1

@@ -1,4 +1,7 @@
-// AC2
+// --------------------------------
+// Guião 1, Ex 5
+// Arquitectura de Computadores II
+// --------------------------------
 // Programa 5 – teste do system call "readStr()" e manipulação de strings
 
 #define STR_MAX_SIZE 20
