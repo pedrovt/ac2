@@ -10,8 +10,7 @@ char *strcat(char *, char *);
 char *strcpy(char *, char *);
 int strlen(char *);
 
-int main(void)
-{
+int main(void) {
   static char str1[STR_MAX_SIZE + 1];
   static char str2[STR_MAX_SIZE + 1];
   static char str3[2 * STR_MAX_SIZE + 1];
