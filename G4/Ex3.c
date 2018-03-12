@@ -32,7 +32,7 @@ int main(void) {
     // Ler um caracter do teclado e esperar que seja digitada uma letra
     // entre 'a' e 'g' (ou 'A' e 'G') ou o caracter '.' Use o system call getChar().
 
-    char c = getChar();
+    char c = toLowerCase(getChar());
     while (c != 'a' && c != 'b' && c != 'c' && c != 'd' && c != 'e' && c != 'f' && c != 'g' && c != '.') {
       c = getChar();
 
