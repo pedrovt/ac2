@@ -4,6 +4,9 @@
 # Pedro Teixeira, 84715, MIECT
 # --------------------------------
 
+# Map of registers
+# $t0 -> counter
+
           .equ READ_CORE_TIMER, 11
           .equ RESET_CORE_TIMER, 12
           .equ PUT_CHAR, 3
@@ -19,10 +22,10 @@ main:     li $t0,0
 while:                                      # while (1) {
           li $v0, READ_CORE_TIMER           #   while(readCoreTimer() < 20000);
           syscall                           #
-          bne $v0, 200000, while            #   Or branch if less than (blt)
-                                            #   For 10 HZ, value is  2.000.000
-                                            #   For 5  HZ, value is  4.000.000
-                                            #   For 1  HZ, value is 20.000.000
+          blt $v0, 200000,   while          #   For 100 HZ, value is    200.000
+          #blt $v0, 2000000,  while         #   For 10  HZ, value is  2.000.000
+          #blt $v0, 4000000,  while         #   For 5   HZ, value is  4.000.000
+          #blt $v0, 20000000, while         #   For 1   HZ, value is 20.000.000
 
           li $v0, RESET_CORE_TIMER          #   resetCoreTimer();
           syscall                           #
