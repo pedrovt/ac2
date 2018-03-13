@@ -47,4 +47,5 @@ while:                           # while (1) {
 
           j while                # }
 
+          li $v0, 1
           jr $ra
