@@ -1,6 +1,6 @@
 # --------------------------------
-# Guião 3, Parte 2, Ex. 1c)
-# 4 Bits Up/Down Binary Counter
+# Guião 3, Parte 2, Ex. 1e)
+# 4 Bits Johnson Counter Right Shift
 # Arquitectura de Computadores II
 # Pedro Teixeira, 84715, MIECT
 # --------------------------------
@@ -8,20 +8,19 @@
 # Registers Map
 # $s0, $s1, $s2 -> used to access TRIS/LAT/PORT registers
 # $s3 -> counter
-# $t0 -> LATE
-# $t1 -> PORTB
+# $t1 -> LSBit after shift right
 
           .equ SFR_BASE_HI, 0xBF88   # 16 MSbits of SFR area
-
-          .equ TRISE, 0x6100 	       # TRISE address is 0xBF886100
-          .equ PORTE, 0x6110	       # PORTE address is 0xBF886110
-          .equ LATE, 0x6120 	       # LATE  address is 0xBF886120
-          .equ ODCE, 0x6130 	       # ODCE  address is 0xBF886130
 
           .equ TRISB, 0x6040 	       # TRISB address is 0xBF886040
           .equ PORTB, 0x6050	       # PORTB address is 0xBF886050
           .equ LATB, 0x6060 	       # LATB  address is 0xBF886060
           .equ ODCB, 0x6070 	       # ODCB  address is 0xBF886070
+
+          .equ TRISE, 0x6100 	       # TRISE address is 0xBF886100
+          .equ PORTE, 0x6110	       # PORTE address is 0xBF886110
+          .equ LATE, 0x6120 	       # LATE  address is 0xBF886120
+          .equ ODCE, 0x6130 	       # ODCE  address is 0xBF886130
 
           .equ ms, 1000              # 1 second to allow easier debugging
 
@@ -50,38 +49,22 @@ main:     subu $sp, $sp, 20	         # Save $ra, $s registers
 
           li $s3, 0                  # counter = 0;
 
-                                     # 4 Bits Up Binary Counter
+                                     # 4 Bits Johnson Counter Right Shift
 while:                               # while(1) {
           li $a0, ms
           jal delay
 
-          lw $t1, PORTB($s0)         #   Read from RB3 port
-          andi $t1, $t1, 0x0008
+          not  $t1, $s3
+          andi $t1, $t1, 0x0008      # keeps NOT(bit 3)
+          sll  $t1, $t1, 3           # bit 3 becomes bit 0
 
-if:       beq $t1, 0, else
-          addi  $s3, $s3,  1         #   RB3 port = '1' --> UP    (+1)
+          srl  $s3, $s3, 1
+		      or   $s3, $s3, $t1
 
-          li $a0,'+'                 #   Debug
-          li $v0, 3
-          syscall
-
-          j endIf
-else:     addi  $s3, $s3, -1         #   RB3 port = '0' --> DOWN  (-1)
-
-          li $a0,'-'                 #   Debug
-          li $v0, 3
-          syscall
-
-endIf:    andi  $s3, $s3, 0x000F     #   counter <- counter | 0x000F
-
-          li $a0,' '                 #   Debug
-          li $v0, 3
-          syscall
-
-          lw $t0, LATE($s0)          #   $t0 <- LATE
-          andi $t0, $t0, 0xFFF0      #   $t0 <- $t0 & 0xFFF0
-          or   $t0, $t0, $s3         #   $t0 <- $t0 | counter
-          sw $t0, LATE($s0)          #   LATE <- $t0
+          lw $t1, LATE($s0)          #   $t1 <- LATE
+          andi $t1, $t1, 0xFFF0      #   $t1 <- $t1 & 0xFFF0
+          or   $t1, $t1, $s3         #   $t1 <- $t1 | counter
+          sw $t1, LATE($s0)          #   LATE <- $t1
 
           j while                    # }
 
