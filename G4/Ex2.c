@@ -5,7 +5,7 @@
 // --------------------------------
 
 # include <detpic32.h>
-# include "delay.h"
+# include "delay.c"
 
 int main(void) {
   // Set RE0 to RE3 ports as outputs (could read the whole TRISE and the mask 0xFFF0)

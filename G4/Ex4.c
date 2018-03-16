@@ -4,9 +4,9 @@
 // Pedro Teixeira, 84715, MIECT
 // --------------------------------
 
-#include <detpic32.h>
-#include "delay.h"
-#include "charUtils.h"
+# include <detpic32.h>
+# include "delay.c"
+# include "charUtils.c"
 
 int main(void) {
   unsigned char segment;
@@ -22,8 +22,8 @@ int main(void) {
 
   while(1) {
     // toggle display selection
-    //LATDbits.LATD6 = !LATDbits.LATD6;
-    //LATDbits.LATD5 = !LATDbits.LATD5;
+    LATDbits.LATD6 = !LATDbits.LATD6;
+    LATDbits.LATD5 = !LATDbits.LATD5;
 
     segment = 1;
     int i = 0;

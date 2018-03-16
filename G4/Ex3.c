@@ -4,9 +4,9 @@
 // Pedro Teixeira, 84715, MIECT
 // --------------------------------
 
-#include <detpic32.h>
-#include "delay.h"
-#include "charUtils.h"
+# include <detpic32.h>
+# include "delay.c"
+# include "charUtils.c"
 
 int main(void) {
   // Sets ports RB8 to RB15, RD5 and RD6 as outputs
@@ -14,9 +14,15 @@ int main(void) {
   TRISDbits.TRISD5 = 0;
   TRISDbits.TRISD6 = 0;
 
-  // Selecionar apenas o "display low" (RD5=1, i.e. "CNTL_DISP_L"=1, e RD6=0)
-  LATDbits.LATD5 = 1;
-  LATDbits.LATD6 = 0;
+
+  // Comment what is not needed
+  // Select Display Low (RD5=1, i.e. "CNTL_DISP_L"=1, e RD6=0)
+  // LATDbits.LATD5 = 1;
+  // LATDbits.LATD6 = 0;
+
+  // Select Display Hight (RD5=0, i.e. "CNTL_DISP_L"=1, e RD6=1)
+  LATDbits.LATD5 = 0;
+  LATDbits.LATD6 = 1;
 
   // Em ciclo infinito, execute as seguintes tarefas:
   //printStr("HELLO!");

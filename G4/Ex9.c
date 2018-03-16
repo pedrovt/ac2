@@ -4,9 +4,9 @@
 // Pedro Teixeira, 84715, MIECT
 // --------------------------------
 
-#include <detpic32.h>
-#include "delay.h"
-#include "charUtils.h"
+# include <detpic32.h>
+# include "delay.c"
+# include "charUtils.c"
 
 int main(void) {
 
@@ -20,7 +20,7 @@ int main(void) {
   TRISDbits.TRISD5 = 0;
   TRISDbits.TRISD6 = 0;
 
-  // Select display low
+  // Select display high
   LATDbits.LATD5 = 0;
   LATDbits.LATD6 = 1;
 

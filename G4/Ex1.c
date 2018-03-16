@@ -5,7 +5,7 @@
 // --------------------------------
 
 # include <detpic32.h>
-# include "delay.h"
+# include "delay.c"
 
 int main(void) {
   LATDbits.LATD0 = 0;         // The initial value should be set

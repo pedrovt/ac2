@@ -4,9 +4,9 @@
 // Pedro Teixeira, 84715, MIECT
 // --------------------------------
 
-#include <detpic32.h>
-#include "delay.h"
-#include "charUtils.h"
+# include <detpic32.h>
+# include "delay.c"
+# include "charUtils.c"
 
 int main(void) {
 
