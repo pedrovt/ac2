@@ -1,5 +1,5 @@
 // --------------------------------
-// Guião 5, Ex.3
+// Guião 5, Ex.4
 // Arquitectura de Computadores II
 // Pedro Teixeira, 84715, MIECT
 // --------------------------------

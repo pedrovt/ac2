@@ -11,3 +11,5 @@ Pedro Teixeira
 de I/O do PIC32. Teste dos dos dispositivos montados. Utilização do core timer do MIPS para gerar atrasos programáveis.
   - Aula 03: Estrutura básica e modo de configuração de um porto de I/O no microcontrolador PIC32 (em Assembly).
   - Aula 04: Modo de configuração de um porto de I/O no microcontrolador PIC32 (em linguagem C). Implementação de um sistema de visualização com dois displays de 7 segmentos.
+  - Aula 05: Modo de funcionamento de um periférico com capacidade de produzir informação. Técnica de polling para detetar a ocorrência de um evento e efetuar o consequente processamento. Conversão analógica/digital de um sinal de entrada e exibição do resultado no sistema de visualização implementado anteriormente.
+  - Aula 06: Modo de funcionamento de um periférico com capacidade de produzir informação. Técnica de interrupção para detetar a ocorrência de um evento e efetuar o consequente processamento. Conversão analógica/digital de um sinal de entrada e exibição do resultado no sistema de visualização implementado anteriormente.

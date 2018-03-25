@@ -47,10 +47,9 @@ int main(void) {
 
     // Reset LATB6
     LATBbits.LATB6 = 0;
-    
+
     // Read conversion result (ADC1BUF0 value) and print it
     printInt(ADC1BUF0, 16 | 3 << 16);
-    delay(100);             // comment as necessary. used to make debugging easier
     putChar(' ');
 
     // Reset AD1IF
