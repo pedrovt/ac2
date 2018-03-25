@@ -1,14 +1,11 @@
 // --------------------------------
-// Guião 5, Ex.6
+// Guião 5, Ex.3
 // Arquitectura de Computadores II
 // Pedro Teixeira, 84715, MIECT
 // --------------------------------
 
 # include <detpic32.h>
 # include "delay.c"
-# include "send2displays.c"
-# include "toBcd.c"
-
 # define numSamples 4
 
 int main(void) {
@@ -19,8 +16,8 @@ int main(void) {
 
   AD1CHSbits.CH0SA  = 4;   // Step 2  - Desired input analog channel (0 to 15)
 
-  AD1CON2bits.SMPI = numSamples - 1;    // Step 3  - 16 (because reasons) samples will be converted and stored
-  // in buffer locations ADC1BUF0 to ADC1BUF3
+  AD1CON2bits.SMPI = numSamples - 1;    // Step 3  - numSamples samples will be converted
+                                        // and stored in buffer locations ADC1BUF0 to ADC1BUF3
 
   AD1CON1bits.SSRC = 7;    // Step 4  - Conversion trigger selection bits: in
   // this mode an internal counter ends sampling and
@@ -36,47 +33,32 @@ int main(void) {
   // This must the last command of the A/D
   // configuration sequence
 
-  int i = 0, j = 0;
-  double v = 0;
-
+  int i;
   while(1) {
-    delay(10);        // 10 ms
-    if(++i == 25) {   // 250 ms
-      // Start conversion
-      AD1CON1bits.ASAM = 1;
+    // Start conversion
+    AD1CON1bits.ASAM = 1;
 
-      // Wait while conversion not done (AD1IF == 0)
-      while(IFS1bits.AD1IF == 0);
+    // Wait while conversion not done (AD1IF == 0)
+    while(IFS1bits.AD1IF == 0);
 
-      // Read conversion result (ADC1BUF0-FF value) and print it
-      int VAL_AD = 0;
-      int *p = (int *) (&ADC1BUF0);
-      for(j = 0; j < numSamples; j++) {
-        int value = p[j*4];
-        VAL_AD += value;
-        //printInt(value, 10 | 4 << 10);
-        //putChar(' ');
-      }
+    // Read conversion result (ADC1BUF0-FF value) and print it
+    int *p = (int *) (&ADC1BUF0);
+    for(i = 0; i < 16; i++) {
+      // 16 MSBits with the number of chars (4 in this situation)
+      // 16 LSBits with the base (10 in this situation)
 
-      // Get average sample
-      VAL_AD /= numSamples;
-      // printf("\nAverage Value= %d \n", VAL_AD);
-
-      // Get tension amplitude
-      v = (VAL_AD*33 + 511)/1023;
-      printf("V= %f\n\n", v);
-
-      // Reset AD1IF
-      IFS1bits.AD1IF = 0;
-      i = 0;
+      printInt(p[i*4], 10 | 4 << 16);
+      putChar(' ');
     }
 
-    // Debug
-    // printf("V to be sent = %f\n", v);
+    putChar('\n');
 
-    // Send to displays
-    send2displays(toBcd((char)v), 1);
+    // Reset AD1IF
+    IFS1bits.AD1IF = 0;
 
+    // comment as necessary. used to make debugging easier
+    delay(100);
   }
+
   return 1;
 }

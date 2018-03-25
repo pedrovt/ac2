@@ -43,15 +43,20 @@ int main(void) {
     // Read conversion result (ADC1BUF0-FF value) and print it
     int *p = (int *) (&ADC1BUF0);
     for(i = 0; i < 16; i++) {
-      printInt(p[i*4], 10 | 4 << 10);
+      // 16 MSBits with the number of chars (4 in this situation)
+      // 16 LSBits with the base (10 in this situation)
+
+      printInt(p[i*4], 10 | 4 << 16);
       putChar(' ');
     }
 
-    delay(100);            // comment as necessary. used to make debugging easier
     putChar('\n');
 
     // Reset AD1IF
     IFS1bits.AD1IF = 0;
+
+    // comment as necessary. used to make debugging easier
+    delay(100);
   }
 
   return 1;
