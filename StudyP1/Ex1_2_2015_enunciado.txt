@@ -1,0 +1,15 @@
+1. 
+a) Edite o ficheiro Assembly f103a.s. Escreva um programa que leia, em ciclo infinito, os dip-switches DS4...DS1. Considere que o valor lido é um número em complemento para um (na gama -7 a 7). Apresente esse valor nos leds, em sinal e módulo, sob a forma de um gráfico de barra. Os LED6..0 devem indicar o módulo (LED6 é o mais significativo) e o LED7 deve indicar o sinal (LED7 aceso quando o número lido for negativo).
+
+b) Grave o programa anterior no ficheiro f103b.s. O valor que aparece agora em LED7..0 deve corresponder ao número lido do teclado. Só valores do teclado compreendidos entre -7 a 7 devem alterar a saída.
+
+2. 
+a) Use o ficheiro t203a.c para editar um programa que apresente no display mais significativo uma forma animada que simule uma cobra (Snake), correspondendo à sucessiva activação dos segmentos f, a, b, g, e, d, c, g, um de cada vez. Cada segmento deve estar activo durante 0.25s.
+
+b) Grave o programa auteríor em f203b.c. Altere-o por forma a que o sinal analógico ligado à ADC permita alterar dinamicamente a velocidade de deslocamento da Snake em 8 níveis (0.25s, 0.5s, ... , 2s ). Faça a detecção do fim de conversão da ADC por polling.
+
+c) Grave o programa anterior em f203c.c e modifique-o por forma a desenhar a Snake nos dois dígitos do display, activando sucessivamente os segmentos fl, al, bl, e2, d2, c2, b2, a2, f2. c1, d1, e1.
+
+d) Substitua o polling da ADC por atendimento por interrupção. Guarde este programa no ficheiro f203d.c.
+
+- Sufixos: 1 = MSD; 2 = LSD (MSD - Display mais sign, LSD - Display menos sign).
