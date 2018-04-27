@@ -1,7 +1,7 @@
 // --------------------------------
 // send2displays V3
 // With support for decimal point
-// Arquitectura de Computadores II
+// Computer Architecture II
 // Pedro Teixeira, 84715, MIECT
 // --------------------------------
 

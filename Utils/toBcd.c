@@ -1,6 +1,6 @@
 // --------------------------------
-// Converts a value to BCD 
-// Arquitectura de Computadores II
+// Converts a value to BCD
+// Computer Architecture II
 // --------------------------------
 
 unsigned char toBcd(unsigned char value) {

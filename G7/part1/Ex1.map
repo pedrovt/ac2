@@ -1,0 +1,955 @@
+Archive member included because of file (symbol)
+
+/opt/pic32mx/lib/libm.a(ceil32.o)
+                              Ex1.o (ceil)
+/opt/pic32mx/lib/libm.a(dp32.o)
+                              Ex1.o (__muldf3)
+/opt/pic32mx/lib/libc.a(exit.o)
+                              Ex1.o (exit)
+/opt/pic32mx/lib/libc.a(stdclean.o)
+                              /opt/pic32mx/lib/libc.a(exit.o) (_cleanup)
+/opt/pic32mx/lib/libc.a(_exit.o)
+                              /opt/pic32mx/lib/libc.a(exit.o) (_exit)
+/opt/pic32mx/lib/libc.a(_iob.o)
+                              /opt/pic32mx/lib/libc.a(stdclean.o) (_iob)
+/opt/pic32mx/lib/libc.a(fclose.o)
+                              /opt/pic32mx/lib/libc.a(stdclean.o) (fclose)
+/opt/pic32mx/lib/libc.a(fflush.o)
+                              /opt/pic32mx/lib/libc.a(fclose.o) (fflush)
+/opt/pic32mx/lib/libc.a(buf.o)
+                              /opt/pic32mx/lib/libc.a(fclose.o) (_buffree)
+/opt/pic32mx/lib/libc.a(errno.o)
+                              /opt/pic32mx/lib/libc.a(buf.o) (errno)
+/opt/pic32mx/lib/libc.a(tfiles.o)
+                              /opt/pic32mx/lib/libc.a(fclose.o) (_tfilesptr)
+/opt/pic32mx/lib/libc.a(sbrk.o)
+                              /opt/pic32mx/lib/libc.a(buf.o) (sbrk)
+/opt/pic32mx/lib/libc.a(write.o)
+                              /opt/pic32mx/lib/libc.a(fflush.o) (write)
+/opt/pic32mx/lib/libc.a(remove.o)
+                              /opt/pic32mx/lib/libc.a(fclose.o) (remove)
+/opt/pic32mx/lib/libc.a(close.o)
+                              /opt/pic32mx/lib/libc.a(fclose.o) (close)
+/opt/pic32mx/lib/libc.a(memset.o)
+                              /opt/pic32mx/lib/libc.a(sbrk.o) (memset)
+/opt/pic32mx/lib/libc.a(_mon_putc.o)
+                              /opt/pic32mx/lib/libc.a(write.o) (_mon_putc)
+/opt/pic32mx/lib/libc.a(c32_uart.o)
+                              /opt/pic32mx/lib/libc.a(_mon_putc.o) (__C32_UART)
+
+Allocating common symbols
+Common symbol       size              file
+
+_atexitptr          0x4               /opt/pic32mx/lib/libc.a(stdclean.o)
+errno               0x4               /opt/pic32mx/lib/libc.a(errno.o)
+_sibuf              0x20              /opt/pic32mx/lib/libc.a(_iob.o)
+_outdone            0x1               /opt/pic32mx/lib/libc.a(_iob.o)
+_tfilesptr          0x4               /opt/pic32mx/lib/libc.a(tfiles.o)
+_sobuf              0x20              /opt/pic32mx/lib/libc.a(_iob.o)
+
+Microchip PIC32 Memory-Usage Report
+
+kseg0 Program-Memory Usage
+section                    address  length [bytes]      (dec)  Description
+-------                 ----------  -------------------------  -----------
+.text                   0x9d001400         0x21cc        8652  Application's executable code 
+.rodata                 0x9d0035d0          0x108         264  Read-only constant data 
+.data                   0x9d0036d8           0xa0         160  Data-initialization template 
+.sdata                  0x9d003778            0x8           8  Small data-initialization template 
+      Total kseg0_program_mem used  :      0x237c        9084  1.7% of 0x7ec00
+
+kseg0 Boot-Memory Usage
+section                    address  length [bytes]      (dec)  Description
+-------                 ----------  -------------------------  -----------
+.startup                0x9d001000          0x2b0         688  C startup code 
+         Total kseg0_boot_mem used  :       0x2b0         688  68.3% of 0x3f0
+
+Exception-Memory Usage 
+section                    address  length [bytes]      (dec)  Description
+-------                 ----------  -------------------------  -----------
+.app_excpt              0x9d000180           0x14          20  General-Exception handler 
+          Total exception_mem used  :        0x14          20  0.5% of 0x1000
+
+kseg1 Boot-Memory Usage
+section                    address  length [bytes]      (dec)  Description
+-------                 ----------  -------------------------  -----------
+         Total kseg1_boot_mem used  :           0           0  <1% of 0x490
+        --------------------------------------------------------------------------
+         Total Program Memory used  :      0x2640        9792  1.9% of 0x80480
+        --------------------------------------------------------------------------
+
+
+kseg1 Data-Memory Usage
+section                    address  length [bytes]      (dec)  Description
+-------                 ----------  -------------------------  -----------
+.data                   0xa0000000           0xa0         160  Initialized data 
+.sdata                  0xa00000a0            0x8           8  Small initialized data 
+.sbss                   0xa00000a8           0x24          36  Small uninitialized data 
+.bss                    0xa00000cc           0x58          88  Uninitialized data 
+.stack                  0xa0000128         0x2000        8192  Minimum space reserved for stack 
+         Total kseg1_data_mem used  :      0x2124        8484  6.5% of 0x20000
+        --------------------------------------------------------------------------
+            Total Data Memory used  :      0x2124        8484  6.5% of 0x20000
+        --------------------------------------------------------------------------
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+kseg0_program_mem 0x000000009d001400 0x000000000007ec00 xr
+kseg0_boot_mem   0x000000009d001000 0x00000000000003f0
+exception_mem    0x000000009d000000 0x0000000000001000
+kseg1_boot_mem   0x00000000bfc00000 0x0000000000000490
+debug_exec_mem   0x00000000bfc02000 0x0000000000000ff0
+config3          0x00000000bfc02ff0 0x0000000000000004
+config2          0x00000000bfc02ff4 0x0000000000000004
+config1          0x00000000bfc02ff8 0x0000000000000004
+config0          0x00000000bfc02ffc 0x0000000000000004
+kseg1_data_mem   0x00000000a0000000 0x0000000000020000 w !x
+sfrs             0x00000000bf800000 0x0000000000100000
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD Ex1.o
+LOAD /opt/pic32mx/lib/libdetpic32.a
+LOAD /opt/pic32mx/lib/gcc/pic32mx/3.4.4/libgcc.a
+LOAD /opt/pic32mx/lib/libm.a
+LOAD /opt/pic32mx/lib/libc.a
+LOAD /opt/pic32mx/lib/libsupc++.a
+LOAD /opt/pic32mx/lib/libxcpp.a
+                0x0000000000000400                PROVIDE (_min_stack_size, 0x400)
+                0x0000000000000000                PROVIDE (_min_heap_size, 0x0)
+LOAD /opt/pic32mx/lib/startup.o
+                0x0000000000000001                PROVIDE (_vector_spacing, 0x1)
+                0x000000009d000000                _ebase_address = 0x9d000000
+                0x0000000000000001                _vector_spacing = 0x1
+                0x000000009d001800                _reset = 0x9d001800
+                0x0000000000002000                _min_stack_size = 0x2000
+                0x0000000000000000                _min_heap_size = 0x0
+                0x00000000bfc00000                _RESET_ADDR = 0xbfc00000
+                0x00000000bfc00380                _BEV_EXCPT_ADDR = 0xbfc00380
+                0x00000000bfc00480                _DBG_EXCPT_ADDR = 0xbfc00480
+                0x00000000bfc02000                _DBG_CODE_ADDR = 0xbfc02000
+                0x000000009d000180                _GEN_EXCPT_ADDR = (_ebase_address + 0x180)
+
+.config_BFC02FF0
+ *(.config_BFC02FF0)
+
+.config_BFC02FF4
+ *(.config_BFC02FF4)
+
+.config_BFC02FF8
+ *(.config_BFC02FF8)
+
+.config_BFC02FFC
+ *(.config_BFC02FFC)
+
+.startup        0x000000009d001000      0x2b0
+ *(.startup)
+ .startup       0x000000009d001000      0x2b0 /opt/pic32mx/lib/startup.o
+                0x000000009d001000                startup
+ *(.startup)
+
+.reset
+ *(.reset)
+
+.bev_excpt
+ *(.bev_handler)
+
+.dbg_excpt      0x00000000bfc00480        0x0
+                0x00000000bfc00480                . = (. + DEFINED (_DEBUGGER)?0x8:0x0)
+
+.dbg_code       0x00000000bfc02000        0x0
+                0x00000000bfc02000                . = (. + DEFINED (_DEBUGGER)?0xff0:0x0)
+
+.app_excpt      0x000000009d000180       0x14
+ *(.gen_handler)
+ .gen_handler   0x000000009d000180       0x14 /opt/pic32mx/lib/startup.o
+
+.vector_0       0x000000009d000200        0x0
+ *(.vector_0)
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_0) <= (_vector_spacing << 0x5))), function at exception vector 0 too large)
+
+.vector_1       0x000000009d000220        0x0
+ *(.vector_1)
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_1) <= (_vector_spacing << 0x5))), function at exception vector 1 too large)
+
+.vector_2       0x000000009d000240        0x0
+ *(.vector_2)
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_2) <= (_vector_spacing << 0x5))), function at exception vector 2 too large)
+
+.vector_3       0x000000009d000260        0x0
+ *(.vector_3)
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_3) <= (_vector_spacing << 0x5))), function at exception vector 3 too large)
+
+.vector_4       0x000000009d000280        0x0
+ *(.vector_4)
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_4) <= (_vector_spacing << 0x5))), function at exception vector 4 too large)
+
+.vector_5       0x000000009d0002a0        0x0
+ *(.vector_5)
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_5) <= (_vector_spacing << 0x5))), function at exception vector 5 too large)
+
+.vector_6       0x000000009d0002c0        0x0
+ *(.vector_6)
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_6) <= (_vector_spacing << 0x5))), function at exception vector 6 too large)
+
+.vector_7       0x000000009d0002e0        0x0
+ *(.vector_7)
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_7) <= (_vector_spacing << 0x5))), function at exception vector 7 too large)
+
+.vector_8       0x000000009d000300        0x0
+ *(.vector_8)
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_8) <= (_vector_spacing << 0x5))), function at exception vector 8 too large)
+
+.vector_9       0x000000009d000320        0x0
+ *(.vector_9)
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_9) <= (_vector_spacing << 0x5))), function at exception vector 9 too large)
+
+.vector_10      0x000000009d000340        0x0
+ *(.vector_10)
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_10) <= (_vector_spacing << 0x5))), function at exception vector 10 too large)
+
+.vector_11      0x000000009d000360        0x0
+ *(.vector_11)
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_11) <= (_vector_spacing << 0x5))), function at exception vector 11 too large)
+
+.vector_12      0x000000009d000380        0x0
+ *(.vector_12)
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_12) <= (_vector_spacing << 0x5))), function at exception vector 12 too large)
+
+.vector_13      0x000000009d0003a0        0x0
+ *(.vector_13)
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_13) <= (_vector_spacing << 0x5))), function at exception vector 13 too large)
+
+.vector_14      0x000000009d0003c0        0x0
+ *(.vector_14)
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_14) <= (_vector_spacing << 0x5))), function at exception vector 14 too large)
+
+.vector_15      0x000000009d0003e0        0x0
+ *(.vector_15)
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_15) <= (_vector_spacing << 0x5))), function at exception vector 15 too large)
+
+.vector_16      0x000000009d000400        0x0
+ *(.vector_16)
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_16) <= (_vector_spacing << 0x5))), function at exception vector 16 too large)
+
+.vector_17      0x000000009d000420        0x0
+ *(.vector_17)
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_17) <= (_vector_spacing << 0x5))), function at exception vector 17 too large)
+
+.vector_18      0x000000009d000440        0x0
+ *(.vector_18)
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_18) <= (_vector_spacing << 0x5))), function at exception vector 18 too large)
+
+.vector_19      0x000000009d000460        0x0
+ *(.vector_19)
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_19) <= (_vector_spacing << 0x5))), function at exception vector 19 too large)
+
+.vector_20      0x000000009d000480        0x0
+ *(.vector_20)
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_20) <= (_vector_spacing << 0x5))), function at exception vector 20 too large)
+
+.vector_21      0x000000009d0004a0        0x0
+ *(.vector_21)
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_21) <= (_vector_spacing << 0x5))), function at exception vector 21 too large)
+
+.vector_22      0x000000009d0004c0        0x0
+ *(.vector_22)
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_22) <= (_vector_spacing << 0x5))), function at exception vector 22 too large)
+
+.vector_23      0x000000009d0004e0        0x0
+ *(.vector_23)
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_23) <= (_vector_spacing << 0x5))), function at exception vector 23 too large)
+
+.vector_24      0x000000009d000500        0x0
+ *(.vector_24)
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_24) <= (_vector_spacing << 0x5))), function at exception vector 24 too large)
+
+.vector_25      0x000000009d000520        0x0
+ *(.vector_25)
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_25) <= (_vector_spacing << 0x5))), function at exception vector 25 too large)
+
+.vector_26      0x000000009d000540        0x0
+ *(.vector_26)
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_26) <= (_vector_spacing << 0x5))), function at exception vector 26 too large)
+
+.vector_27      0x000000009d000560        0x0
+ *(.vector_27)
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_27) <= (_vector_spacing << 0x5))), function at exception vector 27 too large)
+
+.vector_28      0x000000009d000580        0x0
+ *(.vector_28)
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_28) <= (_vector_spacing << 0x5))), function at exception vector 28 too large)
+
+.vector_29      0x000000009d0005a0        0x0
+ *(.vector_29)
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_29) <= (_vector_spacing << 0x5))), function at exception vector 29 too large)
+
+.vector_30      0x000000009d0005c0        0x0
+ *(.vector_30)
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_30) <= (_vector_spacing << 0x5))), function at exception vector 30 too large)
+
+.vector_31      0x000000009d0005e0        0x0
+ *(.vector_31)
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_31) <= (_vector_spacing << 0x5))), function at exception vector 31 too large)
+
+.vector_32      0x000000009d000600        0x0
+ *(.vector_32)
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_32) <= (_vector_spacing << 0x5))), function at exception vector 32 too large)
+
+.vector_33      0x000000009d000620        0x0
+ *(.vector_33)
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_33) <= (_vector_spacing << 0x5))), function at exception vector 33 too large)
+
+.vector_34      0x000000009d000640        0x0
+ *(.vector_34)
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_34) <= (_vector_spacing << 0x5))), function at exception vector 34 too large)
+
+.vector_35      0x000000009d000660        0x0
+ *(.vector_35)
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_35) <= (_vector_spacing << 0x5))), function at exception vector 35 too large)
+
+.vector_36      0x000000009d000680        0x0
+ *(.vector_36)
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_36) <= (_vector_spacing << 0x5))), function at exception vector 36 too large)
+
+.vector_37      0x000000009d0006a0        0x0
+ *(.vector_37)
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_37) <= (_vector_spacing << 0x5))), function at exception vector 37 too large)
+
+.vector_38      0x000000009d0006c0        0x0
+ *(.vector_38)
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_38) <= (_vector_spacing << 0x5))), function at exception vector 38 too large)
+
+.vector_39      0x000000009d0006e0        0x0
+ *(.vector_39)
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_39) <= (_vector_spacing << 0x5))), function at exception vector 39 too large)
+
+.vector_40      0x000000009d000700        0x0
+ *(.vector_40)
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_40) <= (_vector_spacing << 0x5))), function at exception vector 40 too large)
+
+.vector_41      0x000000009d000720        0x0
+ *(.vector_41)
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_41) <= (_vector_spacing << 0x5))), function at exception vector 41 too large)
+
+.vector_42      0x000000009d000740        0x0
+ *(.vector_42)
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_42) <= (_vector_spacing << 0x5))), function at exception vector 42 too large)
+
+.vector_43      0x000000009d000760        0x0
+ *(.vector_43)
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_43) <= (_vector_spacing << 0x5))), function at exception vector 43 too large)
+
+.vector_44      0x000000009d000780        0x0
+ *(.vector_44)
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_44) <= (_vector_spacing << 0x5))), function at exception vector 44 too large)
+
+.vector_45      0x000000009d0007a0        0x0
+ *(.vector_45)
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_45) <= (_vector_spacing << 0x5))), function at exception vector 45 too large)
+
+.vector_46      0x000000009d0007c0        0x0
+ *(.vector_46)
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_46) <= (_vector_spacing << 0x5))), function at exception vector 46 too large)
+
+.vector_47      0x000000009d0007e0        0x0
+ *(.vector_47)
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_47) <= (_vector_spacing << 0x5))), function at exception vector 47 too large)
+
+.vector_48      0x000000009d000800        0x0
+ *(.vector_48)
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_48) <= (_vector_spacing << 0x5))), function at exception vector 48 too large)
+
+.vector_49      0x000000009d000820        0x0
+ *(.vector_49)
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_49) <= (_vector_spacing << 0x5))), function at exception vector 49 too large)
+
+.vector_50      0x000000009d000840        0x0
+ *(.vector_50)
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_50) <= (_vector_spacing << 0x5))), function at exception vector 50 too large)
+
+.vector_51      0x000000009d000860        0x0
+ *(.vector_51)
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_51) <= (_vector_spacing << 0x5))), function at exception vector 51 too large)
+
+.vector_52      0x000000009d000880        0x0
+ *(.vector_52)
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_52) <= (_vector_spacing << 0x5))), function at exception vector 52 too large)
+
+.vector_53      0x000000009d0008a0        0x0
+ *(.vector_53)
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_53) <= (_vector_spacing << 0x5))), function at exception vector 53 too large)
+
+.vector_54      0x000000009d0008c0        0x0
+ *(.vector_54)
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_54) <= (_vector_spacing << 0x5))), function at exception vector 54 too large)
+
+.vector_55      0x000000009d0008e0        0x0
+ *(.vector_55)
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_55) <= (_vector_spacing << 0x5))), function at exception vector 55 too large)
+
+.vector_56      0x000000009d000900        0x0
+ *(.vector_56)
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_56) <= (_vector_spacing << 0x5))), function at exception vector 56 too large)
+
+.vector_57      0x000000009d000920        0x0
+ *(.vector_57)
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_57) <= (_vector_spacing << 0x5))), function at exception vector 57 too large)
+
+.vector_58      0x000000009d000940        0x0
+ *(.vector_58)
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_58) <= (_vector_spacing << 0x5))), function at exception vector 58 too large)
+
+.vector_59      0x000000009d000960        0x0
+ *(.vector_59)
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_59) <= (_vector_spacing << 0x5))), function at exception vector 59 too large)
+
+.vector_60      0x000000009d000980        0x0
+ *(.vector_60)
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_60) <= (_vector_spacing << 0x5))), function at exception vector 60 too large)
+
+.vector_61      0x000000009d0009a0        0x0
+ *(.vector_61)
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_61) <= (_vector_spacing << 0x5))), function at exception vector 61 too large)
+
+.vector_62      0x000000009d0009c0        0x0
+ *(.vector_62)
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_62) <= (_vector_spacing << 0x5))), function at exception vector 62 too large)
+
+.vector_63      0x000000009d0009e0        0x0
+ *(.vector_63)
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_63) <= (_vector_spacing << 0x5))), function at exception vector 63 too large)
+
+.text           0x000000009d001400     0x21cc
+                0x000000009d001400                _text_begin = .
+ *(.text .stub .text.* .gnu.linkonce.t.*)
+ .text          0x000000009d001400      0x774 Ex1.o
+                0x000000009d001638                nearestPowerOf2
+                0x000000009d0017cc                getTimerConstantsTimerTypeA
+                0x000000009d0014f4                send2displays
+                0x000000009d001448                configADC
+                0x000000009d001600                toBcd
+                0x000000009d001400                toLowerCase
+                0x000000009d001ad8                configInterrupts_TimerT3
+                0x000000009d0019d4                configTimerT3
+                0x000000009d001b18                main
+                0x000000009d00168c                getTimerConstantsTimerTypeB
+                0x000000009d0014a8                delay
+                0x000000009d001910                configTimerT1
+                0x000000009d001a98                configInterrupts_TimerT1
+                0x000000009d001424                toUpperCase
+                0x000000009d00166c                log2Integers
+ .text          0x000000009d001b74       0xfc /opt/pic32mx/lib/libm.a(ceil32.o)
+                0x000000009d001b74                ceil
+                0x000000009d001b74                dpceil
+ .text          0x000000009d001c70     0x1128 /opt/pic32mx/lib/libm.a(dp32.o)
+                0x000000009d002d20                fabs
+                0x000000009d002be4                __eqdf2
+                0x000000009d002be4                __gtdf2
+                0x000000009d001c70                dpsub
+                0x000000009d002878                __floatsidf
+                0x000000009d002be4                __ltdf2
+                0x000000009d0028ec                ultodp
+                0x000000009d00209c                dpmul
+                0x000000009d0029e0                dptofp
+                0x000000009d002b60                __fixunsdfsi
+                0x000000009d002be4                dpcmp
+                0x000000009d00293c                __extendsfdf2
+                0x000000009d001c78                __adddf3
+                0x000000009d002b60                dptoul
+                0x000000009d0023c4                dpdiv
+                0x000000009d002878                litodp
+                0x000000009d002ad8                __fixdfsi
+                0x000000009d002be4                __ledf2
+                0x000000009d00293c                fptodp
+                0x000000009d002d08                __negdf2
+                0x000000009d001c78                dpadd
+                0x000000009d0023c4                __divdf3
+                0x000000009d00209c                __muldf3
+                0x000000009d0029e0                __truncdfsf2
+                0x000000009d002be4                __nedf2
+                0x000000009d002ad8                dptoli
+                0x000000009d002d3c                nan
+                0x000000009d002d20                dpfabs
+                0x000000009d002be4                __gedf2
+                0x000000009d002d3c                dpnan
+                0x000000009d001c70                __subdf3
+ .text.exit     0x000000009d002d98       0x1c /opt/pic32mx/lib/libc.a(exit.o)
+                0x000000009d002d98                exit
+ .text._cleanup
+                0x000000009d002db4       0x60 /opt/pic32mx/lib/libc.a(stdclean.o)
+                0x000000009d002db4                _cleanup
+ .text._exit    0x000000009d002e14        0x8 /opt/pic32mx/lib/libc.a(_exit.o)
+                0x000000009d002e14                _exit
+ .text.fclose   0x000000009d002e1c      0x114 /opt/pic32mx/lib/libc.a(fclose.o)
+                0x000000009d002e1c                fclose
+ .text.fflush   0x000000009d002f30       0xc4 /opt/pic32mx/lib/libc.a(fflush.o)
+                0x000000009d002f30                fflush
+ .text._bufallo
+                0x000000009d002ff4       0x58 /opt/pic32mx/lib/libc.a(buf.o)
+                0x000000009d002ff4                _bufallo
+ .text._buffree
+                0x000000009d00304c       0x10 /opt/pic32mx/lib/libc.a(buf.o)
+                0x000000009d00304c                _buffree
+ .text.getpagesize
+                0x000000009d00305c        0x8 /opt/pic32mx/lib/libc.a(sbrk.o)
+                0x000000009d00305c                getpagesize
+ .text._stub_sbd_memlayout
+                0x000000009d003064       0x2c /opt/pic32mx/lib/libc.a(sbrk.o)
+                0x000000009d003064                _stub_sbd_memlayout
+                0x000000009d003064                _sbd_memlayout
+ .text._sbrk_init
+                0x000000009d003090      0x158 /opt/pic32mx/lib/libc.a(sbrk.o)
+                0x000000009d003090                _sbrk_init
+ .text._sbrk    0x000000009d0031e8       0xbc /opt/pic32mx/lib/libc.a(sbrk.o)
+                0x000000009d0031e8                _sbrk
+ .text.sbrk     0x000000009d0032a4       0x74 /opt/pic32mx/lib/libc.a(sbrk.o)
+                0x000000009d0032a4                sbrk
+ .text.write    0x000000009d003318       0xa8 /opt/pic32mx/lib/libc.a(write.o)
+                0x000000009d003318                write
+ .text.remove   0x000000009d0033c0        0x8 /opt/pic32mx/lib/libc.a(remove.o)
+                0x000000009d0033c0                remove
+ .text.close    0x000000009d0033c8        0x8 /opt/pic32mx/lib/libc.a(close.o)
+                0x000000009d0033c8                close
+ .text          0x000000009d0033d0       0xa8 /opt/pic32mx/lib/libc.a(memset.o)
+                0x000000009d0033d0                memset
+ .text._mon_putc
+                0x000000009d003478       0xa4 /opt/pic32mx/lib/libc.a(_mon_putc.o)
+                0x000000009d003478                _mon_putc
+ .text          0x000000009d00351c       0xb0 /opt/pic32mx/lib/startup.o
+                0x000000009d00358c                printStr
+                0x000000009d00356c                printInt
+                0x000000009d00354c                readInt
+                0x000000009d0035c4                resetCoreTimer
+                0x000000009d00353c                putChar
+                0x000000009d00359c                readStr
+                0x000000009d0035ac                exxt
+                0x000000009d00357c                printInt10
+                0x000000009d00351c                inkey
+                0x000000009d00352c                getChar
+                0x000000009d00355c                readInt10
+                0x000000009d0035bc                readCoreTimer
+ *(.text.*personality*)
+ *(.gnu.warning)
+ *(.mips16.fn.*)
+ *(.mips16.call.*)
+                0x000000009d0035cc                _text_end = .
+
+.rodata         0x000000009d0035d0      0x108
+ *(.rodata .rodata.* .gnu.linkonce.r.*)
+ .rodata        0x000000009d0035d0       0x10 Ex1.o
+ .rodata.str1.4
+                0x000000009d0035e0       0xd3 Ex1.o
+                                         0xd4 (size before relaxing)
+ *fill*         0x000000009d0036b3        0x5 00
+ .rodata.cst8   0x000000009d0036b8        0x8 Ex1.o
+                                         0x10 (size before relaxing)
+ .rodata        0x000000009d0036c0       0x15 /opt/pic32mx/lib/startup.o
+ *(.rodata1)
+                0x000000009d0036d8                . = ALIGN (0x4)
+ *fill*         0x000000009d0036d5        0x3 00
+
+.sdata2         0x000000009d0036d8        0x0
+ *(.sdata2 .sdata2.* .gnu.linkonce.s2.*)
+                0x000000009d0036d8                . = ALIGN (0x4)
+
+.sbss2          0x000000009d0036d8        0x0
+ *(.sbss2 .sbss2.* .gnu.linkonce.sb2.*)
+                0x000000009d0036d8                . = ALIGN (0x4)
+
+.eh_frame_hdr
+ *(.eh_frame_hdr)
+
+.eh_frame
+ *(.eh_frame)
+
+.dbg_data       0x00000000a0000000        0x0
+                0x00000000a0000000                . = (. + DEFINED (_DEBUGGER)?0x200:0x0)
+
+.data           0x00000000a0000000       0xa0 load address 0x000000009d0036d8
+                0x00000000a0000000                _data_begin = .
+ *(.data .data.* .gnu.linkonce.d.*)
+ .data          0x00000000a0000000       0xa0 /opt/pic32mx/lib/libc.a(_iob.o)
+                0x00000000a0000000                _iob
+ *(.gnu.linkonce.d.*personality*)
+ *(.data1)
+                0x000000009d0036d8                _data_image_begin = LOADADDR (.data)
+
+.eh_frame
+ *(.eh_frame)
+                0x00000000a0008090                _gp = (ALIGN (0x10) + 0x7ff0)
+
+.got
+ *(.got.plt)
+ *(.got)
+
+.sdata          0x00000000a00000a0        0x8 load address 0x000000009d003778
+                0x00000000a00000a0                _sdata_begin = .
+ *(.sdata .sdata.* .gnu.linkonce.s.*)
+ .sdata         0x00000000a00000a0        0x4 /opt/pic32mx/lib/libc.a(_iob.o)
+                0x00000000a00000a0                _Files
+ .sdata         0x00000000a00000a4        0x4 /opt/pic32mx/lib/libc.a(c32_uart.o)
+                0x00000000a00000a4                __C32_UART
+                0x00000000a00000a8                _sdata_end = .
+
+.lit8
+ *(.lit8)
+
+.lit4
+ *(.lit4)
+                0x00000000a00000a8                . = ALIGN (0x4)
+                0x00000000a00000a8                _data_end = .
+                0x00000000a00000a8                _bss_begin = .
+
+.sbss           0x00000000a00000a8       0x24
+                0x00000000a00000a8                _sbss_begin = .
+ *(.dynsbss)
+ *(.sbss .sbss.* .gnu.linkonce.sb.*)
+ .sbss          0x00000000a00000a8        0x1 Ex1.o
+ *fill*         0x00000000a00000a9        0x3 00
+ .sbss          0x00000000a00000ac        0x4 /opt/pic32mx/lib/libc.a(buf.o)
+ .sbss          0x00000000a00000b0        0xc /opt/pic32mx/lib/libc.a(sbrk.o)
+                0x00000000a00000b4                _minbrk
+                0x00000000a00000b0                _maxbrk
+ *(.scommon)
+ .scommon       0x00000000a00000bc        0x4 /opt/pic32mx/lib/libc.a(stdclean.o)
+                0x00000000a00000bc                _atexitptr
+ .scommon       0x00000000a00000c0        0x1 /opt/pic32mx/lib/libc.a(_iob.o)
+                0x00000000a00000c0                _outdone
+ *fill*         0x00000000a00000c1        0x3 00
+ .scommon       0x00000000a00000c4        0x4 /opt/pic32mx/lib/libc.a(errno.o)
+                0x00000000a00000c4                errno
+ .scommon       0x00000000a00000c8        0x4 /opt/pic32mx/lib/libc.a(tfiles.o)
+                0x00000000a00000c8                _tfilesptr
+                0x00000000a00000cc                _sbss_end = .
+
+.bss            0x00000000a00000cc       0x58
+ *(.dynbss)
+ *(.bss .bss.* .gnu.linkonce.b.*)
+ .bss           0x00000000a00000cc       0x18 /opt/pic32mx/lib/libc.a(sbrk.o)
+ *(COMMON)
+ COMMON         0x00000000a00000e4       0x40 /opt/pic32mx/lib/libc.a(_iob.o)
+                0x00000000a00000e4                _sibuf
+                0x00000000a0000104                _sobuf
+                0x00000000a0000124                . = ALIGN (0x4)
+                0x00000000a0000124                . = ALIGN (0x4)
+                0x00000000a0000124                _end = .
+                0x00000000a0000124                _bss_end = .
+
+.persist        0x00000000a0000124        0x0
+ *(.persist)
+                0x00000000a0000124                . = ALIGN (0x4)
+
+.heap           0x00000000a0000124        0x0
+                0x00000000a0000124                _heap = .
+                0x00000000a0000124                . = (. + _min_heap_size)
+
+.stack          0x00000000a0000128     0x2000
+                0x00000000a0000128                _splim = .
+                0x00000000a0000128                _SPLIM = .
+                0x00000000a0002128                . = (. + _min_stack_size)
+ *fill*         0x00000000a0000128     0x2000 00
+
+.ramfunc        0x00000000a0002800        0x0 load address 0x000000009d003780
+                0x00000000a0002800                _ramfunc_begin = .
+ *(.ramfunc .ramfunc.*)
+                0x00000000a0002800                . = ALIGN (0x4)
+                0x00000000a0002800                _ramfunc_end = .
+                0x000000009d003780                _ramfunc_image_begin = LOADADDR (.ramfunc)
+                0x0000000000000000                _ramfunc_length = SIZEOF (.ramfunc)
+                0x0000000000002800                _bmxdkpba_address = (_ramfunc_begin - 0xa0000000)
+                0x0000000000020000                _bmxdudba_address = 0x20000
+                0x0000000000020000                _bmxdupba_address = 0x20000
+                0x00000000a0020000                _stack = (_ramfunc_length > 0x0)?(_ramfunc_begin - 0x4):0xa0020000
+                0x0000000000000001                ASSERT (((_min_stack_size + _min_heap_size) <= (_stack - _heap)), Not enough space to allocate both stack and heap.  Reduce heap and/or stack size.)
+
+.pdr            0x0000000000000000      0x400
+ *(.pdr)
+ .pdr           0x0000000000000000      0x1e0 Ex1.o
+ .pdr           0x00000000000001e0       0x20 /opt/pic32mx/lib/libc.a(exit.o)
+ .pdr           0x0000000000000200       0x20 /opt/pic32mx/lib/libc.a(stdclean.o)
+ .pdr           0x0000000000000220       0x20 /opt/pic32mx/lib/libc.a(_exit.o)
+ .pdr           0x0000000000000240       0x20 /opt/pic32mx/lib/libc.a(fclose.o)
+ .pdr           0x0000000000000260       0x20 /opt/pic32mx/lib/libc.a(fflush.o)
+ .pdr           0x0000000000000280       0x40 /opt/pic32mx/lib/libc.a(buf.o)
+ .pdr           0x00000000000002c0       0xa0 /opt/pic32mx/lib/libc.a(sbrk.o)
+ .pdr           0x0000000000000360       0x20 /opt/pic32mx/lib/libc.a(write.o)
+ .pdr           0x0000000000000380       0x20 /opt/pic32mx/lib/libc.a(remove.o)
+ .pdr           0x00000000000003a0       0x20 /opt/pic32mx/lib/libc.a(close.o)
+ .pdr           0x00000000000003c0       0x20 /opt/pic32mx/lib/libc.a(memset.o)
+ .pdr           0x00000000000003e0       0x20 /opt/pic32mx/lib/libc.a(_mon_putc.o)
+
+.reginfo        0x0000000000000000       0x18
+ *(.reginfo)
+ .reginfo       0x0000000000000000       0x18 Ex1.o
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x0000000000000000      0x571
+ *(.comment)
+ .comment       0x0000000000000000       0x4d Ex1.o
+ .comment       0x000000000000004d       0x4d /opt/pic32mx/lib/libc.a(exit.o)
+ .comment       0x000000000000009a       0x4d /opt/pic32mx/lib/libc.a(stdclean.o)
+ .comment       0x00000000000000e7       0x4d /opt/pic32mx/lib/libc.a(_exit.o)
+ .comment       0x0000000000000134       0x4d /opt/pic32mx/lib/libc.a(_iob.o)
+ .comment       0x0000000000000181       0x4d /opt/pic32mx/lib/libc.a(fclose.o)
+ .comment       0x00000000000001ce       0x4d /opt/pic32mx/lib/libc.a(fflush.o)
+ .comment       0x000000000000021b       0x4d /opt/pic32mx/lib/libc.a(buf.o)
+ .comment       0x0000000000000268       0x4d /opt/pic32mx/lib/libc.a(errno.o)
+ .comment       0x00000000000002b5       0x4d /opt/pic32mx/lib/libc.a(tfiles.o)
+ .comment       0x0000000000000302       0x98 /opt/pic32mx/lib/libc.a(sbrk.o)
+ .comment       0x000000000000039a       0x4d /opt/pic32mx/lib/libc.a(write.o)
+ .comment       0x00000000000003e7       0x4d /opt/pic32mx/lib/libc.a(remove.o)
+ .comment       0x0000000000000434       0x4d /opt/pic32mx/lib/libc.a(close.o)
+ .comment       0x0000000000000481       0x56 /opt/pic32mx/lib/libc.a(memset.o)
+ .comment       0x00000000000004d7       0x4d /opt/pic32mx/lib/libc.a(_mon_putc.o)
+ .comment       0x0000000000000524       0x4d /opt/pic32mx/lib/libc.a(c32_uart.o)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x0000000000000000      0x1e0
+ *(.debug_aranges)
+ .debug_aranges
+                0x0000000000000000       0x28 /opt/pic32mx/lib/libc.a(exit.o)
+ .debug_aranges
+                0x0000000000000028       0x28 /opt/pic32mx/lib/libc.a(stdclean.o)
+ .debug_aranges
+                0x0000000000000050       0x28 /opt/pic32mx/lib/libc.a(_exit.o)
+ .debug_aranges
+                0x0000000000000078       0x28 /opt/pic32mx/lib/libc.a(fclose.o)
+ .debug_aranges
+                0x00000000000000a0       0x28 /opt/pic32mx/lib/libc.a(fflush.o)
+ .debug_aranges
+                0x00000000000000c8       0x30 /opt/pic32mx/lib/libc.a(buf.o)
+ .debug_aranges
+                0x00000000000000f8       0x48 /opt/pic32mx/lib/libc.a(sbrk.o)
+ .debug_aranges
+                0x0000000000000140       0x28 /opt/pic32mx/lib/libc.a(write.o)
+ .debug_aranges
+                0x0000000000000168       0x28 /opt/pic32mx/lib/libc.a(remove.o)
+ .debug_aranges
+                0x0000000000000190       0x28 /opt/pic32mx/lib/libc.a(close.o)
+ .debug_aranges
+                0x00000000000001b8       0x28 /opt/pic32mx/lib/libc.a(_mon_putc.o)
+
+.debug_pubnames
+                0x0000000000000000      0x25b
+ *(.debug_pubnames)
+ .debug_pubnames
+                0x0000000000000000       0x1b /opt/pic32mx/lib/libc.a(exit.o)
+ .debug_pubnames
+                0x000000000000001b       0x2e /opt/pic32mx/lib/libc.a(stdclean.o)
+ .debug_pubnames
+                0x0000000000000049       0x1c /opt/pic32mx/lib/libc.a(_exit.o)
+ .debug_pubnames
+                0x0000000000000065       0x49 /opt/pic32mx/lib/libc.a(_iob.o)
+ .debug_pubnames
+                0x00000000000000ae       0x1d /opt/pic32mx/lib/libc.a(fclose.o)
+ .debug_pubnames
+                0x00000000000000cb       0x1d /opt/pic32mx/lib/libc.a(fflush.o)
+ .debug_pubnames
+                0x00000000000000e8       0x2c /opt/pic32mx/lib/libc.a(buf.o)
+ .debug_pubnames
+                0x0000000000000114       0x1c /opt/pic32mx/lib/libc.a(errno.o)
+ .debug_pubnames
+                0x0000000000000130       0x21 /opt/pic32mx/lib/libc.a(tfiles.o)
+ .debug_pubnames
+                0x0000000000000151       0x74 /opt/pic32mx/lib/libc.a(sbrk.o)
+ .debug_pubnames
+                0x00000000000001c5       0x1c /opt/pic32mx/lib/libc.a(write.o)
+ .debug_pubnames
+                0x00000000000001e1       0x1d /opt/pic32mx/lib/libc.a(remove.o)
+ .debug_pubnames
+                0x00000000000001fe       0x1c /opt/pic32mx/lib/libc.a(close.o)
+ .debug_pubnames
+                0x000000000000021a       0x20 /opt/pic32mx/lib/libc.a(_mon_putc.o)
+ .debug_pubnames
+                0x000000000000023a       0x21 /opt/pic32mx/lib/libc.a(c32_uart.o)
+
+.debug_info     0x0000000000000000      0xdc0
+ *(.debug_info .gnu.linkonce.wi.*)
+ .debug_info    0x0000000000000000       0x6a /opt/pic32mx/lib/libc.a(exit.o)
+ .debug_info    0x000000000000006a      0x13f /opt/pic32mx/lib/libc.a(stdclean.o)
+ .debug_info    0x00000000000001a9       0x4a /opt/pic32mx/lib/libc.a(_exit.o)
+ .debug_info    0x00000000000001f3      0x150 /opt/pic32mx/lib/libc.a(_iob.o)
+ .debug_info    0x0000000000000343      0x162 /opt/pic32mx/lib/libc.a(fclose.o)
+ .debug_info    0x00000000000004a5       0xf1 /opt/pic32mx/lib/libc.a(fflush.o)
+ .debug_info    0x0000000000000596      0x145 /opt/pic32mx/lib/libc.a(buf.o)
+ .debug_info    0x00000000000006db       0x3f /opt/pic32mx/lib/libc.a(errno.o)
+ .debug_info    0x000000000000071a      0x127 /opt/pic32mx/lib/libc.a(tfiles.o)
+ .debug_info    0x0000000000000841      0x282 /opt/pic32mx/lib/libc.a(sbrk.o)
+ .debug_info    0x0000000000000ac3       0x7c /opt/pic32mx/lib/libc.a(write.o)
+ .debug_info    0x0000000000000b3f       0xa9 /opt/pic32mx/lib/libc.a(remove.o)
+ .debug_info    0x0000000000000be8       0x9e /opt/pic32mx/lib/libc.a(close.o)
+ .debug_info    0x0000000000000c86       0xfb /opt/pic32mx/lib/libc.a(_mon_putc.o)
+ .debug_info    0x0000000000000d81       0x3f /opt/pic32mx/lib/libc.a(c32_uart.o)
+
+.debug_abbrev   0x0000000000000000      0x861
+ *(.debug_abbrev)
+ .debug_abbrev  0x0000000000000000       0x60 /opt/pic32mx/lib/libc.a(exit.o)
+ .debug_abbrev  0x0000000000000060       0xbd /opt/pic32mx/lib/libc.a(stdclean.o)
+ .debug_abbrev  0x000000000000011d       0x41 /opt/pic32mx/lib/libc.a(_exit.o)
+ .debug_abbrev  0x000000000000015e       0x81 /opt/pic32mx/lib/libc.a(_iob.o)
+ .debug_abbrev  0x00000000000001df       0xcc /opt/pic32mx/lib/libc.a(fclose.o)
+ .debug_abbrev  0x00000000000002ab       0x80 /opt/pic32mx/lib/libc.a(fflush.o)
+ .debug_abbrev  0x000000000000032b      0x109 /opt/pic32mx/lib/libc.a(buf.o)
+ .debug_abbrev  0x0000000000000434       0x30 /opt/pic32mx/lib/libc.a(errno.o)
+ .debug_abbrev  0x0000000000000464       0x90 /opt/pic32mx/lib/libc.a(tfiles.o)
+ .debug_abbrev  0x00000000000004f4      0x153 /opt/pic32mx/lib/libc.a(sbrk.o)
+ .debug_abbrev  0x0000000000000647       0x73 /opt/pic32mx/lib/libc.a(write.o)
+ .debug_abbrev  0x00000000000006ba       0x7f /opt/pic32mx/lib/libc.a(remove.o)
+ .debug_abbrev  0x0000000000000739       0x6f /opt/pic32mx/lib/libc.a(close.o)
+ .debug_abbrev  0x00000000000007a8       0x89 /opt/pic32mx/lib/libc.a(_mon_putc.o)
+ .debug_abbrev  0x0000000000000831       0x30 /opt/pic32mx/lib/libc.a(c32_uart.o)
+
+.debug_line     0x0000000000000000     0x1800
+ *(.debug_line)
+ .debug_line    0x0000000000000000      0x19d /opt/pic32mx/lib/libc.a(exit.o)
+ .debug_line    0x000000000000019d      0x1b9 /opt/pic32mx/lib/libc.a(stdclean.o)
+ .debug_line    0x0000000000000356       0x9e /opt/pic32mx/lib/libc.a(_exit.o)
+ .debug_line    0x00000000000003f4      0x196 /opt/pic32mx/lib/libc.a(_iob.o)
+ .debug_line    0x000000000000058a      0x1ec /opt/pic32mx/lib/libc.a(fclose.o)
+ .debug_line    0x0000000000000776      0x1e4 /opt/pic32mx/lib/libc.a(fflush.o)
+ .debug_line    0x000000000000095a      0x258 /opt/pic32mx/lib/libc.a(buf.o)
+ .debug_line    0x0000000000000bb2      0x17c /opt/pic32mx/lib/libc.a(errno.o)
+ .debug_line    0x0000000000000d2e      0x198 /opt/pic32mx/lib/libc.a(tfiles.o)
+ .debug_line    0x0000000000000ec6      0x3c3 /opt/pic32mx/lib/libc.a(sbrk.o)
+ .debug_line    0x0000000000001289       0xc2 /opt/pic32mx/lib/libc.a(write.o)
+ .debug_line    0x000000000000134b      0x1aa /opt/pic32mx/lib/libc.a(remove.o)
+ .debug_line    0x00000000000014f5      0x1a9 /opt/pic32mx/lib/libc.a(close.o)
+ .debug_line    0x000000000000169e       0xd3 /opt/pic32mx/lib/libc.a(_mon_putc.o)
+ .debug_line    0x0000000000001771       0x8f /opt/pic32mx/lib/libc.a(c32_uart.o)
+
+.debug_frame    0x0000000000000000      0x230
+ *(.debug_frame)
+ .debug_frame   0x0000000000000000       0x2c /opt/pic32mx/lib/libc.a(exit.o)
+ .debug_frame   0x000000000000002c       0x30 /opt/pic32mx/lib/libc.a(stdclean.o)
+ .debug_frame   0x000000000000005c       0x20 /opt/pic32mx/lib/libc.a(_exit.o)
+ .debug_frame   0x000000000000007c       0x30 /opt/pic32mx/lib/libc.a(fclose.o)
+ .debug_frame   0x00000000000000ac       0x2c /opt/pic32mx/lib/libc.a(fflush.o)
+ .debug_frame   0x00000000000000d8       0x38 /opt/pic32mx/lib/libc.a(buf.o)
+ .debug_frame   0x0000000000000110       0x8c /opt/pic32mx/lib/libc.a(sbrk.o)
+ .debug_frame   0x000000000000019c       0x34 /opt/pic32mx/lib/libc.a(write.o)
+ .debug_frame   0x00000000000001d0       0x20 /opt/pic32mx/lib/libc.a(remove.o)
+ .debug_frame   0x00000000000001f0       0x20 /opt/pic32mx/lib/libc.a(close.o)
+ .debug_frame   0x0000000000000210       0x20 /opt/pic32mx/lib/libc.a(_mon_putc.o)
+
+.debug_str      0x0000000000000000      0x9af
+ *(.debug_str)
+ .debug_str     0x0000000000000000       0xd6 /opt/pic32mx/lib/libc.a(exit.o)
+                                         0xef (size before relaxing)
+ .debug_str     0x00000000000000d6       0xd4 /opt/pic32mx/lib/libc.a(stdclean.o)
+                                        0x157 (size before relaxing)
+ .debug_str     0x00000000000001aa       0x74 /opt/pic32mx/lib/libc.a(_exit.o)
+                                         0xc2 (size before relaxing)
+ .debug_str     0x000000000000021e       0x89 /opt/pic32mx/lib/libc.a(_iob.o)
+                                        0x14f (size before relaxing)
+ .debug_str     0x00000000000002a7       0x8d /opt/pic32mx/lib/libc.a(fclose.o)
+                                        0x14e (size before relaxing)
+ .debug_str     0x0000000000000334       0x74 /opt/pic32mx/lib/libc.a(fflush.o)
+                                        0x135 (size before relaxing)
+ .debug_str     0x00000000000003a8       0xbc /opt/pic32mx/lib/libc.a(buf.o)
+                                        0x152 (size before relaxing)
+ .debug_str     0x0000000000000464       0x6c /opt/pic32mx/lib/libc.a(errno.o)
+                                         0xb9 (size before relaxing)
+ .debug_str     0x00000000000004d0       0x6d /opt/pic32mx/lib/libc.a(tfiles.o)
+                                        0x147 (size before relaxing)
+ .debug_str     0x000000000000053d      0x101 /opt/pic32mx/lib/libc.a(sbrk.o)
+                                        0x19d (size before relaxing)
+ .debug_str     0x000000000000063e       0x82 /opt/pic32mx/lib/libc.a(write.o)
+                                         0xd6 (size before relaxing)
+ .debug_str     0x00000000000006c0       0xdd /opt/pic32mx/lib/libc.a(remove.o)
+                                        0x16e (size before relaxing)
+ .debug_str     0x000000000000079d       0xc2 /opt/pic32mx/lib/libc.a(close.o)
+                                        0x160 (size before relaxing)
+ .debug_str     0x000000000000085f       0xe1 /opt/pic32mx/lib/libc.a(_mon_putc.o)
+                                        0x13a (size before relaxing)
+ .debug_str     0x0000000000000940       0x6f /opt/pic32mx/lib/libc.a(c32_uart.o)
+                                         0xc1 (size before relaxing)
+
+.debug_loc
+ *(.debug_loc)
+
+.debug_macinfo  0x0000000000000000    0x14835
+ *(.debug_macinfo)
+ .debug_macinfo
+                0x0000000000000000      0xbb6 /opt/pic32mx/lib/libc.a(exit.o)
+ .debug_macinfo
+                0x0000000000000bb6     0x1e47 /opt/pic32mx/lib/libc.a(stdclean.o)
+ .debug_macinfo
+                0x00000000000029fd      0x92f /opt/pic32mx/lib/libc.a(_exit.o)
+ .debug_macinfo
+                0x000000000000332c     0x1e4e /opt/pic32mx/lib/libc.a(_iob.o)
+ .debug_macinfo
+                0x000000000000517a     0x1e6a /opt/pic32mx/lib/libc.a(fclose.o)
+ .debug_macinfo
+                0x0000000000006fe4     0x1e59 /opt/pic32mx/lib/libc.a(fflush.o)
+ .debug_macinfo
+                0x0000000000008e3d     0x23b5 /opt/pic32mx/lib/libc.a(buf.o)
+ .debug_macinfo
+                0x000000000000b1f2      0xdbb /opt/pic32mx/lib/libc.a(errno.o)
+ .debug_macinfo
+                0x000000000000bfad     0x1e47 /opt/pic32mx/lib/libc.a(tfiles.o)
+ .debug_macinfo
+                0x000000000000ddf4     0x1199 /opt/pic32mx/lib/libc.a(sbrk.o)
+ .debug_macinfo
+                0x000000000000ef8d      0x92f /opt/pic32mx/lib/libc.a(write.o)
+ .debug_macinfo
+                0x000000000000f8bc     0x1e47 /opt/pic32mx/lib/libc.a(remove.o)
+ .debug_macinfo
+                0x0000000000011703     0x1e47 /opt/pic32mx/lib/libc.a(close.o)
+ .debug_macinfo
+                0x000000000001354a      0x9bc /opt/pic32mx/lib/libc.a(_mon_putc.o)
+ .debug_macinfo
+                0x0000000000013f06      0x92f /opt/pic32mx/lib/libc.a(c32_uart.o)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+/DISCARD/
+ *(.note.GNU-stack)
+OUTPUT(Ex1.elf elf32-tradlittlemips)
+
+.mdebug.abi32   0x000000009d003780        0x0
+
+.rel.dyn        0x000000009d003780        0x0
+
+.debug_ranges   0x000000009d003780       0x18
+ .debug_ranges  0x000000009d003780       0x18 /opt/pic32mx/lib/libc.a(fclose.o)

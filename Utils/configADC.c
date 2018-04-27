@@ -1,6 +1,6 @@
 // --------------------------------
 // Config ADC Function
-// Arquitectura de Computadores II
+// Computer Architecture II
 // Pedro Teixeira, 84715, MIECT
 // --------------------------------
 

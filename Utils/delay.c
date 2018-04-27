@@ -1,6 +1,6 @@
 // --------------------------------
 // Delay Function
-// Arquitectura de Computadores II
+// Computer Architecture II
 // --------------------------------
 
 # include <detpic32.h>
