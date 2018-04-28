@@ -44,4 +44,5 @@ void configInterrupts_TimerT1();
 void configInterrupts_TimerT3();
 
 // Config PWM Pins
+int getPWMConstant(unsigned int freq, unsigned int dutyCycle);
 void setPWM_OC1(unsigned int freq, unsigned int dutyCycle);
