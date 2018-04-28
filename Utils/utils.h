@@ -12,6 +12,7 @@
 # include "nearestPowerOf2.c"
 # include "getTimeConstants.c"
 # include "configTimers.c"
+# include "configPWMPins.c"
 
 // Char Utils
 char toLowerCase(char c);
@@ -41,3 +42,6 @@ void configTimerT1(int fout);
 void configTimerT3(int fout);
 void configInterrupts_TimerT1();
 void configInterrupts_TimerT3();
+
+// Config PWM Pins
+void setPWM_OC1(unsigned int freq, unsigned int dutyCycle);

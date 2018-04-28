@@ -31,9 +31,9 @@ struct TimerConstants getTimerConstantsTimerTypeB(int fout)
         printStr("Can't config Timer!\n");
         exit(1);
     }
-
-    k_PRESCALER = log2Integers(k_PRESCALER);
+    
     int prx_value = ((PBCLK / k_PRESCALER) / fout) - 1;
+    k_PRESCALER = log2Integers(k_PRESCALER);
 
     // Create the struct
     struct TimerConstants t;
@@ -63,8 +63,8 @@ struct TimerConstants getTimerConstantsTimerTypeA(int fout)
         exit(1);
     }
 
-    k_PRESCALER = log2Integers(k_PRESCALER);
     int prx_value = ((PBCLK / k_PRESCALER) / fout) - 1;
+    k_PRESCALER = log2Integers(k_PRESCALER);
 
     // Create the struct
     struct TimerConstants t;
