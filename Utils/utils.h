@@ -13,6 +13,7 @@
 # include "getTimeConstants.c"
 # include "configTimers.c"
 # include "configPWMPins.c"
+# include "configUART1.c"
 
 // Char Utils
 char toLowerCase(char c);
@@ -46,3 +47,6 @@ void configInterrupts_TimerT3();
 // Config PWM Pins
 int getPWMConstant(unsigned int freq, unsigned int dutyCycle);
 void setPWM_OC1(unsigned int freq, unsigned int dutyCycle);
+
+// Config UART
+void configUART1(unsigned int baudrate, char numBits, char parity, unsigned int numStopBits);
