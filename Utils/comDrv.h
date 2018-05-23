@@ -1,5 +1,5 @@
 // --------------------------------
-// Guide 9, comDrv Header File
+// Guide 9, COM Driver Header File
 // Computer Architecture II
 // Pedro Teixeira, 84715, MIECT
 // --------------------------------

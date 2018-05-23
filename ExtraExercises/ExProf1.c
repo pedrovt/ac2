@@ -4,7 +4,7 @@
 // --------------------------------
 
 # include <detpic32.h>
-# include "../../Utils/utils.h"
+# include "../Utils/utils.h"
 
 void putc(char byte2send) {
   // Wait while UTXBF == 1

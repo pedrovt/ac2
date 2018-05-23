@@ -1,18 +1,17 @@
 // --------------------------------
-// Guide 9, Ex. Y
+// Guide 9, COM Driver
 // Computer Architecture II
 // Pedro Teixeira, 84715, MIECT
 // --------------------------------
 
 # include <detpic32.h>
-# include "../Utils/utils.h"
 # include "comDrv.h"
 
 # define TRUE 1
 # define FALSE 0
-#define DisableUart1RxInterrupt() IEC0bits.U1RXIE = 0
+# define DisableUart1RxInterrupt() IEC0bits.U1RXIE = 0
 # define EnableUart1RxInterrupt()  IEC0bits.U1RXIE = 1
-#define DisableUart1TxInterrupt() IEC0bits.U1TXIE = 0
+# define DisableUart1TxInterrupt() IEC0bits.U1TXIE = 0
 # define EnableUart1TxInterrupt()  IEC0bits.U1TXIE = 1
 
 // Circular Buffers
@@ -159,29 +158,4 @@ void _int_(24) isr_uart1(void) {
 }
 
 // -----------------------------------------
-int main(void) {
-    comDrv_config(115200, 'N', 1); // default "pterm" parameters
-    // with TX and RX interrupts disabled
-    DisableInterrupts();
 
-    comDrv_flushRx();
-    comDrv_flushTx();
-
-    EnableInterrupts();
-    DisableUart1TxInterrupt();
-    //comDrv_puts("Teste do bloco de transmissao do device driver!...");
-
-    char aux;
-
-    while (1) {
-      if(comDrv_getc(&aux) != 0) {
-        putChar(aux);
-        delay(1000);
-        //comDrv_putc(aux);
-      }
-      
-      //comDrv_putc('c');
-      
-    }
-    return 1;
-}
