@@ -16,3 +16,10 @@ de I/O do PIC32. Teste dos dos dispositivos montados. Utilização do core timer
   - Aula 05: Modo de funcionamento de um periférico com capacidade de produzir informação. Técnica de polling para detetar a ocorrência de um evento e efetuar o consequente processamento. Conversão analógica/digital de um sinal de entrada e exibição do resultado no sistema de visualização implementado anteriormente.
   - Aula 06: Modo de funcionamento de um periférico com capacidade de produzir informação. Técnica de interrupção para detetar a ocorrência de um evento e efetuar o consequente processamento. Conversão analógica/digital de um sinal de entrada e exibição do resultado no sistema de visualização implementado anteriormente.
   - Aula 07: Programação e utilização de timers. Técnicas de polling e de interrupção para detetar a ocorrência de um evento e efetuar o consequente processamento. Geração de sinais PWM.
+  - Aula 08: Comunicação série assíncrona. Funções básicas de comunicação série através de uma UART (técnicas de polling e de interrupção)
+  - Aula 09: Implementação da estrutura básica de um device-driver.
+  - Aula 10: Mecanismos básicos que envolvem a comunicação série usando o
+protocolo I2C. Funções básicas de comunicação série através do módulo I2C do PIC32. Exemplo de interacção com um sensor de temperatura com interface I2C.
+  - Aula 11: Mecanismos básicos que envolvem a comunicação série usando o
+protocolo SPI. Funções de comunicação no PIC32 que permitem a interação com uma
+memória EEPROM com interface SPI.
