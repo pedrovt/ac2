@@ -16,15 +16,18 @@
 
 int main(void) {
 
+  TRISDbits.TRISD8 = 0;
   int ack, temperature;
   i2c1_init(TC74_CLK_FREQ);
 
   while (1) {
+    LATDbits.LATD8 = 0;
+
     // Send Start event
     i2c1_start();
 
     // Send Address + WR (ADDR_WR); copy return value to "ack" variable
-    i2c1_send(SENS_ADDRESS);
+    //i2c1_send(SENS_ADDRESS);
     ack = i2c1_send(ADDR_WR);
 
     // Send Command (RTR); add return value to "ack" variable
@@ -34,7 +37,7 @@ int main(void) {
     i2c1_start();
 
     // Send Address + RD (ADDR_RD); add return value to "ack" variable
-    i2c1_send(SENS_ADDRESS);
+    //i2c1_send(SENS_ADDRESS);
     ack += i2c1_send(ADDR_RD);
 
     // Test "ack" variable; if "ack" != 0 then an error has occurred;
@@ -57,7 +60,9 @@ int main(void) {
     printInt10(temperature);
 
     // Wait 250 ms
-    delay(250);
+    delay(1);
+
+    LATDbits.LATD8 = 1;
   }
 
   return 1;
