@@ -21,7 +21,7 @@
 
 int main(void) {
     char status;
-
+   
     // Config SPI Module
     spi2_init();
     spi2_setClock(EEPROM_CLOCK);
@@ -31,8 +31,10 @@ int main(void) {
     
     while (1) {
       status = eeprom_readStatus();
-      printStr("Hello\n");
+     // printInt10(status);
       printInt(status, 2 | 4 << 16);
+      printStr("\n");
+      delay(100);
     }
   
   return 1;

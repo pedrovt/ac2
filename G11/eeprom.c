@@ -19,7 +19,8 @@
 char eeprom_readStatus(void) {
     volatile char trash;
 
-    SPI2BUF = 0;                          // Clear RX FIFO (discard all data in the reception FIFO)
+    while (SPI2STATbits.SPIRBE == 0)      // while RX FIFO not empty read
+        trash = SPI2BUF;                  // FIFO (discard data)                          // Clear RX FIFO (discard all data in the reception FIFO)
     SPI2STATbits.SPIROV = 0;              // Clear overflow error flag bit
 
     SPI2BUF = RDSR;                       // Send RDSR command
@@ -67,7 +68,8 @@ void eeprom_writeData(int address, char value) {
 char eeprom_readData(int address) {
     volatile char trash;
     // Clear RX FIFO
-    SPI2BUF = 0;
+    while (SPI2STATbits.SPIRBE == 0) // while RX FIFO not empty read
+        trash = SPI2BUF;             // FIFO (discard data)
 
     // Clear overflow error flag bit
     SPI2STATbits.SPIROV = 0;
