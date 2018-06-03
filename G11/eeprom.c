@@ -35,8 +35,9 @@ char eeprom_readStatus(void) {
 }
 
 void eeprom_writeStatusCommand(char command) {
-    while (eeprom_readStatus() & WRSR);   // Wait while there's a write in progress
-    
+    while (eeprom_readStatus() & 0x01)
+        ; // Wait while there's a write in progress
+
     SPI2BUF = command;                    // Copy "command" value to SPI2BUF (TX FIFO)
 
     while (SPI2STATbits.SPIBUSY);         // Wait while SPI module is working (SPIBUSY set)

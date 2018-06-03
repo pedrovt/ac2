@@ -19,7 +19,7 @@
 # define WRDI  0x04         // Disable Write Operations
 # define EEPROM_CLOCK 500000
 
-int main(void) {
+int main1(void) {
     char status;
    
     // Config SPI Module
@@ -31,7 +31,7 @@ int main(void) {
     
     while (1) {
       status = eeprom_readStatus();
-     // printInt10(status);
+      //printInt10(status);
       printInt(status, 2 | 4 << 16);
       printStr("\n");
       delay(100);
@@ -39,3 +39,60 @@ int main(void) {
   
   return 1;
 }
+
+int main(void) {
+    // Config SPI Module
+    spi2_init();
+    spi2_setClock(EEPROM_CLOCK);
+
+    // Activate write operations
+    eeprom_writeStatusCommand(WREN);
+    printStr("\nInsira uma opção:\n1. Read Status (S/s)\n2. Write Data (W/w)\n3. Read Data (R/r) \n");
+    while (1) {
+      // Lê um caracter
+      char readChar = inkey();
+      if (readChar != 0) {
+        //printStr("\n\nDetected key ");
+        //char readChar = getChar();
+        //printStr("\n\nKEY DETECTED!\nRead char: ");
+        //putChar(readChar);
+
+        if ((readChar == 's') | (readChar == 'S')){
+          char status = eeprom_readStatus();
+          printStr("\nStatus: ");
+          printInt(status, 2 | 4 << 16);
+          printStr("\n");
+          delay(100);
+        }
+
+        // Read
+        // Se for 'R' (read) lê um endereço (addr), e imprime o valor lido da memória.
+        else if ((readChar == 'r') | (readChar == 'R')) {
+          printStr("\nRead\n-> Address to read: ");
+          int address = readInt10();
+          char value = eeprom_readData(address);
+          printStr("\n-> Value: ");
+          putChar(value);
+          printStr("\n-> Done!\n");
+        }
+
+        // Write
+        // Se for 'W' (write) lê um endereço e um valor (addr, val), e escreve na EEPROM no endereço addr o valor val.
+        else if ((readChar == 'w') | (readChar == 'W')) {
+          printStr("\nWrite\n-> Address to write: ");
+          int address = readInt10();
+          printStr("\n-> Value to write: ");
+          char value = getChar();
+          putChar(value);
+          eeprom_writeData(address, value);
+          printStr("\n-> Done!\n");
+        }
+        
+        else printStr("\nInvalid Option!\n");
+        printStr("\nInsira uma opção:\n1. Read Status (S/s)\n2. Write Data (W/w)\n3. Read Data (R/r) \n");
+      }
+    }
+
+   return 1;
+}
+
