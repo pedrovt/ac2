@@ -28,7 +28,7 @@ struct TimerConstants getTimerConstantsTimerTypeB(int fout)
     if (k_PRESCALER == 128) 
         k_PRESCALER = 256;
     if (k_PRESCALER > 256) {
-        printStr("Can't config Timer!\n");
+        //printStr("Can't config Timer!\n");
         exit(1);
     }
     
@@ -59,7 +59,7 @@ struct TimerConstants getTimerConstantsTimerTypeA(int fout)
         k_PRESCALER = 256;
     }
     if (k_PRESCALER > 256) {
-        printStr("Can't config Timer!\n");
+        //printStr("Can't config Timer!\n");
         exit(1);
     }
 
