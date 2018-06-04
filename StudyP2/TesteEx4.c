@@ -53,7 +53,7 @@ void configUART1(unsigned int baudrate, unsigned char parity, unsigned int numSt
     U1MODEbits.ON = 1;
 
     // 5) Activar Interrupções
-    //U1STAbits.UTXSEL = 00;
+    U1STAbits.UTXSEL = 00;
     U1STAbits.URXISEL = 00;
     //U1STAbits.UTXEN = 1; // Transmission Module
     U1STAbits.URXEN = 1; // Reception Module
