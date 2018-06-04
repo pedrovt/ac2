@@ -40,12 +40,23 @@ void configUART1(unsigned int baudrate, char numBits, char parity, unsigned int 
     U1STAbits.UTXEN = 1;   // Transmission Module
     U1STAbits.URXEN = 1;   // Reception Module
 
-    // Config UART1 interrupts
-    IPC6bits.U1IP   = 2;   // configure priority of interrupts
-    IFS0bits.U1RXIF = 0;   // clear interrupt flag
-    IEC0bits.U1RXIE = 1;   // enable interrupts
-    IFS0bits.U1TXIF = 0;   // clear interrupt flag
-    IEC0bits.U1TXIE = 1;   // enable interrupts
+    // Enable Interrupts
+    //U1STAbits.UTXSEL = 00;
+    U1STAbits.URXISEL = 00;
+    //U1STAbits.UTXEN = 1; // Transmission Module
+    U1STAbits.URXEN = 1; // Reception Module
+
+    // the folowing bits are on the table in page 74 of the PIC32 manual
+    IEC0bits.U1RXIE = 1;
+    //IEC0bits.U1TXIE = 1;
+    IEC0bits.U1EIE = 1;
+
+    // clear interrupt flags
+    IFS0bits.U1RXIF = 0; 
+    //IFS0bits.U1TXIF = 0; 
+    IFS0bits.U1EIF = 0; 
+
+    IPC6bits.U1IP = 2;
 
     // Enable UART1 (see register U1MODE)
     U1MODEbits.ON = 1;

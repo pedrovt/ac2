@@ -9,10 +9,10 @@
 
 void putc(char byte2send) {
   // Wait while UTXBF == 1
-  while(U1STAbits.UTXBF == 1);    // FIXME
+  while(U1STAbits.UTXBF == 1);  
 
   // Copy byte2send to the UxTXREG register
-  U1TXREG = byte2send;  // FIXME
+  U1TXREG = byte2send;  
 }
 
 char getc(void) {

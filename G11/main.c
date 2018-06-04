@@ -19,27 +19,6 @@
 # define WRDI  0x04         // Disable Write Operations
 # define EEPROM_CLOCK 500000
 
-int main1(void) {
-    char status;
-   
-    // Config SPI Module
-    spi2_init();
-    spi2_setClock(EEPROM_CLOCK);
-
-    // Activate write operations
-    eeprom_writeStatusCommand(WREN);
-    
-    while (1) {
-      status = eeprom_readStatus();
-      //printInt10(status);
-      printInt(status, 2 | 4 << 16);
-      printStr("\n");
-      delay(100);
-    }
-  
-  return 1;
-}
-
 int main(void) {
     // Config SPI Module
     spi2_init();
@@ -52,11 +31,7 @@ int main(void) {
       // Lê um caracter
       char readChar = inkey();
       if (readChar != 0) {
-        //printStr("\n\nDetected key ");
-        //char readChar = getChar();
-        //printStr("\n\nKEY DETECTED!\nRead char: ");
-        //putChar(readChar);
-
+        // Status
         if ((readChar == 's') | (readChar == 'S')){
           char status = eeprom_readStatus();
           printStr("\nStatus: ");

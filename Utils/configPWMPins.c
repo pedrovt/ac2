@@ -13,12 +13,13 @@ int getPWMConstant (unsigned int freq, unsigned int dutyCycle) {
     int value = ((t.VALUE_PRx + 1) * dutyCycle) / 100; // OC1RS as a function of "dutyCycle";
 
     // Debug Info
+    /*
     printStr("PWM Config (Debug Info):\n\tDuty Cycle = ");
     printInt10(dutyCycle);
     printStr("\%\n\tOC1RS = ");
     printInt10(value);
     printStr("\n\n");
-
+    */
     return value;
 }
 
