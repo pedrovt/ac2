@@ -7,6 +7,7 @@ pedrovt 2018
 ## Recursos
   - [Estudo para Teste Prático 1](https://github.com/pedrovt/ac2/tree/master/StudyP1)
   - [Estudo para Teste Prático 2](https://github.com/pedrovt/ac2/tree/master/StudyP2)  
+  - [Exercícios Síntese](https://github.com/pedrovt/ac2/tree/master/SummaryExercises)  
 ## Aulas
   - Aula 01: Processo de compilação, transferência e execução de programa escrito em Assembly/C para correr na placa DETPIC32. System calls da placa DETPIC32. Manipulação de arrays de caracteres (revisão).
   - Aula 02: Montagem em placa branca de dispositivos simples de interação com o utilizador ligados a portos
